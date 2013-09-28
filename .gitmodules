@@ -4,3 +4,6 @@
 [submodule "cookbooks/build-essential"]
 	path = cookbooks/build-essential
 	url = git://github.com/opscode-cookbooks/build-essential.git
+[submodule "data"]
+	path = data
+	url = https://github.com/sosterwalder/elephantsearch_app.git
