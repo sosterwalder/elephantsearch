@@ -9,7 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.network "forwarded_port", guest: 80, host: 8080
 
-  config.vm.synced_folder "data/", "/opt/nginx/sites/elephantsearch"
+  config.vm.synced_folder "data/", "/opt/nginx/sites/elephantsearch", owner: "nobody", group: "root"
 
   config.vm.provision :shell, :path => 'kitchen_renovator.sh'
   config.vm.provision :chef_solo do |chef|
